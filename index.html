@@ -34,6 +34,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
 				  <li><a href="index.html">Home</a></li>
+				  <li><a href="https://github.com/yuanjia528/yuanjia/blob/master/docs/JIAYUAN_CV.pdf">CV</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -42,42 +43,102 @@
 <!-- Page Content -->
 <div class="container">
 	<!-- Photo And Brief -->
-	<div class="row"> 
-		<div class="col-md-8">
-            		<img class="img-responsive" src="WechatIMG53.jpeg" alt="" style="width: 30%; height: auto;"><br>
-        	</div>
-		
-        	<div class="col-md-4" style="padding-left: 15px;">
-            	    	<div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yuan Jia(原嘉)</b></div><br>
-            		<p><b>john at doe.com</b></p>
-            		<p>Random Department</p>
-            		<p>University of Randomness</p>
-            		<p>Street</p>
-            		<p>City</p>
-            		<p>Country</p>
-        	</div>
-        </div>
+	<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-4" >
+				<img class="img-responsive" src="WechatIMG53.jpeg" alt="" style="width: 79%; height: auto;"><br>
+			</div>
 
-	<!-- Publications -->
-        <div class="col-md-8" style="height: 100vh;">    
-        	<h2 id="publications">Publications</h2>
-                
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
-        </div>
+			<div class="col-md-7" >
+				<div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yuan Jia(原嘉)</b></div><br>
+				<p><strong>Tencent</strong> - Database Research and Development Department </p>
+				<p>&emsp;&emsp;——AI for Database Project Team </p>
+				<p><strong>SUN YAT-SEN UNIVERSITY</strong></p>
+				<p>&emsp;&emsp;——Bachelor of Computer Science and Engineering </p>
+				<p><b>Contact: <a href="mailto:john@doe.com">yuanjia339@gmail.com</a></b></p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Biography -->
+	<div class="col-md-10" style="height: 100vh;">    
+		<h2 id="Biography">Biography</h2>
+			I am working at Tencent's Database Research and Development Department for two years. I am part of the AI4DB project team,
+			which is a joint collaboration with 
+			<a href="http://idsm.wnlo.hust.edu.cn/">Intelligent Data Storage and Management Lab</a>,
+			leded by <a href="http://faculty.hust.edu.cn/zhouke2/en/index.htm">Prof. Ke Zhou</a>.
+			I previously studied at Sun Yat-sen University, majoring in Computer Science. 
+			I completed the majority of the courses (92%) in 2.5 years. After that,
+			I had a brief internship experience at the Big Data and Computational Intelligence Research Institute at Sun Yat-sen University, 
+			under the guidance of <a href="https://sites.google.com/site/xiaojunquan">Prof. Xiaojun Quan</a>.
+			And then I started self-learning database management systems and extensively studying AI-related knowledge. 
+			After completing my junior year, I joined Tencent and have been researching AI4DB until today.<br><br>
+
+		<h2 id="Research Interest">Research Interest</h2>
+			Over the past decades, the amount and velocity of data available to the enterprise is accelerating,
+			cloud service providers typically maintain millions of database instances, 
+			and this scale is expected to continue rapidly expanding in the future. 
+			Managing, securing, tuning, detecting anomalies, and resolving issues for such a massive cluster is extremely challenging
+			and may even be impractical for DBAs and database developers.<br>
+
+			In the meantime, AI research has also made significant breakthroughs. AI exhibits strong capabilities in learning from and modeling
+			large amounts of data, as evidenced by its successful applications in computer vision and natural language processing, 
+			leading to substantial commercial success. The integration of AI with large-scale data management systems holds tremendous
+			research value, but it also faces numerous challenges that need to be overcome. I am committed to conducting research
+			in the field of AI4DB and breaking the frontier between AI and large-scale industrial-grade database management systems.
+
+		<h2 id="Work/Research Experience">Research Projects</h2>
+			<h4 id="Query Optimization - Cardinality Estimation">Query Optimization - Cardinality Estimation</h4>
+			• Cardinality estimation is crucial for the database optimizer to generate execution plans, especially for index selection.
+			It is a fundamental yet long-standing problem in the field of query optimization that has not been fully resolved.<br>
+			• Since we are not ready for learned cardinality estimation and take into consideration of the master-salve design of instance.
+			Finally, I proposed a method of using TOP K frequencies instead of sampling to build histograms on the slave node for cardinality estimation . 
+			Test results have shown that this method achieves 40% higher accuracy in cardinality estimation compared to the original histogram approach in
+			MySQL. Statisticing the top K frequency for massive data may be very memory intensive. Based on the SpaceSaving
+			algorithm, I propose a more optimized data structure to achieve memory controllability and time complexity of O
+			(n) for efficient streaming processing of large amounts of data.
+
+			<h4 id="Anomaly Detection">Anomaly Detection</h4>
+			• For large-scale database instances in the cloud, relying on manual discovery and analysis of anomalies
+			is not feasible. It is crucial to have the capability of automated anomaly detection through
+			the combination of machine learning algorithms and DBA expertise.<br>
+			• First phase of the project is 7x24 hour anomaly detection for all cloud instances. I implemented a demo version of
+			the anomaly detection framework and tested various temporal data anomaly detection algorithms.
+
+			<h4 id="cdbtune - Project Phase 2">cdbtune - Project Phase Ⅱ</h4>
+			• The Tencent Cloud Database AI for Database project team has published two research papers on database self-tuning
+			at SIGMOD conference: “An End-to-End Automatic Cloud Database Tuning System Using Deep Reinforcement
+			Learning” and “HUNTER: An Online Cloud Database Hybrid Tuning System for Personalized Requirements”.
+			These papers focus on the optimization of database performance through advanced techniques such as RL.<br>
+			• The productized version of these research findings is known as cdbtune. In cdbtune project phase Ⅱ, which I am
+			responsible for, I have further enhanced the system’s optimization capabilities. Specifically, I have upgraded the
+			tuning process from being based on sysbench/TPCC benchmarking to utilizing real user workload for more accurate
+			and personalized performance tuning.
+
+			<h4 id="Workload Generation">Workload Generation</h4>
+			• Workload generation is defined as generating a representative workload from a given workload. However, current research
+			in both academia and industry primarily focuses on ensuring relative sequential consistency of transaction execution,
+			thereby overlooking conflicts between subworkloads under concurrency. <br>
+			• I have collaborated with Dr. Baoqing Cai, the first
+			author of the paper “HUNTER: An Online Cloud Database Hybrid Tuning System for Personalized Requirements” to
+			jointly develop a workload generation project. Currently, the research paper of this project is in the process of being
+			submitted. Additionally, I have taken the lead in commercializing the workload generation, and its benchmarking
+			capability has already been utilized in the cdbtune Phase 2 project. The workload replay capability can achieve over 90%
+			similarity to the original workload, and it is now widely used for internal anomaly diagnosis, performance testing and commercial proof-of-concept
+			(POC).
+		
+		<h2 id="Hobby">Hobby</h2>
+			Marathon, Music, Cuisine
+			<br><br><br>
+			<a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Template</a> 
+	</div>
 </div> 
 
     <!-- /.container -->
     
     <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+    
     
 </body>
 
