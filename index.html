@@ -7,7 +7,7 @@
 
 <html lang="en">
 <head>
-  <title>Yuan Jia</title>
+  <title>Jia Yuan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -34,7 +34,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
 				  <li><a href="index.html">Home</a></li>
-				  <li><a href="https://github.com/yuanjia528/yuanjia/blob/master/docs/JIAYUAN_CV.pdf">CV</a></li>
+				  <!-- <li><a href="https://github.com/yuanjia528/yuanjia/blob/master/docs/JIAYUAN_CV.pdf">CV</a></li> -->
 		  </ul>
 		</div>
 	  </div>
@@ -51,11 +51,11 @@
 
 			<div class="col-md-7" >
 				<div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yuan Jia(原嘉)</b></div><br>
-				<p><strong>Tencent</strong> - Database Research and Development Department </p>
+				<p><strong>Tencent</strong> - Database R&D Department - CDB/TDSQL-C</p>
 				<p>&emsp;&emsp;——AI for Database Project Team </p>
-				<p><strong>SUN YAT-SEN UNIVERSITY</strong></p>
+				<p><strong>Sun Yat-sen University</strong></p>
 				<p>&emsp;&emsp;——Bachelor of Computer Science and Engineering </p>
-				<p><b>Contact: <a href="mailto:john@doe.com">yuanjia339@gmail.com</a></b></p>
+				<p><b>Contact: <a href="mailto:john@doe.com">woodyuan@tencent.com</a></b></p>
 			</div>
 		</div>
 	</div>
@@ -64,32 +64,24 @@
 	<!-- Biography -->
 	<div class="col-md-10" style="height: 100vh;">    
 		<h2 id="Biography">Biography</h2>
-			I am working at Tencent's Database Research and Development Department for two years. I am part of the AI4DB project team,
-			which is a joint collaboration with 
-			<a href="http://idsm.wnlo.hust.edu.cn/">Intelligent Data Storage and Management Lab</a>,
-			leded by <a href="http://faculty.hust.edu.cn/zhouke2/en/index.htm">Prof. Ke Zhou</a>.
-			I previously studied at Sun Yat-sen University, majoring in Computer Science. 
-			I completed the majority of the courses (92%) in 2.5 years. After that,
-			I had a brief internship experience at the Big Data and Computational Intelligence Research Institute at Sun Yat-sen University, 
-			under the guidance of <a href="https://sites.google.com/site/xiaojunquan">Prof. Xiaojun Quan</a>.
-			And then I started self-learning database management systems and extensively studying AI-related knowledge. 
-			After completing my junior year, I joined Tencent and have been researching AI4DB until today.<br><br>
+			I graduated from Sun Yat-sen University with a bachelor’s degree in computer science.
+			I completed the majority of the courses in 2.5 years. 
+			After that, I had a brief internship experience at the Big Data and Computational Intelligence Research Institute at Sun Yat-sen University, under the guidance of Prof. Xiaojun Quan.
+			I participated in building a Web-based system, for analyzing and classifying news frames in text document. 
+			However, I found that my interests are not solely in NLP, so I decided to leave the laboratory and explore more fields. 
+			By chance, I discovered the MIT 6.824: Distributed System, which is an online open course, and I was deeply moved by its high quality. 
+			Therefore, I started searching for more excellent courses to study, including but not limited to MIT 6.830 Database System, Coursera: Machine Learning, Stanford CS224n: Natural Language Processing, and Shusen Wang: Deep Reinforcement Learning... 
+			During the learning process, I discovered an interest in the intersection of systems and machine learning. After completing my junior year, I joined Tencent and have been researching AI4DB until today. 
+			I am a part of the AI for Database project team, which belongs to the Cloud Database R&D Department. 
+			Our team is dedicated to integrating machine learning into database systems.
 
-		<h2 id="Research Interest">Research Interest</h2>
-			Over the past decades, the amount and velocity of data available to the enterprise is accelerating,
-			cloud service providers typically maintain millions of database instances, 
-			and this scale is expected to continue rapidly expanding in the future. 
-			Managing, securing, tuning, detecting anomalies, and resolving issues for such a massive cluster is extremely challenging
-			and may even be impractical for DBAs and database developers.<br>
 
-			In the meantime, AI research has also made significant breakthroughs. AI exhibits strong capabilities in learning from and modeling
-			large amounts of data, as evidenced by its successful applications in computer vision and natural language processing, 
-			leading to substantial commercial success. The integration of AI with large-scale data management systems holds tremendous
-			research value, but it also faces numerous challenges that need to be overcome. I am committed to conducting research
-			in the field of AI4DB and breaking the frontier between AI and large-scale industrial-grade database management systems.
+		<h2 id="Recent Research Interest">Recent Research Interest</h2>
+			<h4 id="Good data for AI">Good data for AI</h4> For most machine learning practitioners, the success of machine learning projects heavily depends on whether we can find good data for model training.
+            <h4 id="AI for good data">AI for good data</h4> Data scientists spend at least 80% of their time on data preparation. Machine learning models can help address diverse data preparation challenges.
 
 		<h2 id="Work/Research Experience">Research Projects</h2>
-			<h4 id="Query Optimization - Cardinality Estimation">Query Optimization - Cardinality Estimation</h4>
+			<h4 id="Cross-Machine Histogram">Cross-Machine Histogram</h4>
 			• Cardinality estimation is crucial for the database optimizer to generate execution plans, especially for index selection.
 			It is a fundamental yet long-standing problem in the field of query optimization that has not been fully resolved.<br>
 			• Since we are not ready for learned cardinality estimation and take into consideration of the master-salve design of instance.
@@ -99,34 +91,57 @@
 			algorithm, I propose a more optimized data structure to achieve memory controllability and time complexity of O
 			(n) for efficient streaming processing of large amounts of data.
 
-			<h4 id="Anomaly Detection">Anomaly Detection</h4>
-			• For large-scale database instances in the cloud, relying on manual discovery and analysis of anomalies
-			is not feasible. It is crucial to have the capability of automated anomaly detection through
-			the combination of machine learning algorithms and DBA expertise.<br>
-			• First phase of the project is 7x24 hour anomaly detection for all cloud instances. I implemented a demo version of
-			the anomaly detection framework and tested various temporal data anomaly detection algorithms.
 
 			<h4 id="cdbtune - Project Phase 2">cdbtune - Project Phase Ⅱ</h4>
-			• The Tencent Cloud Database AI for Database project team has published two research papers on database self-tuning
-			at SIGMOD conference: “An End-to-End Automatic Cloud Database Tuning System Using Deep Reinforcement
-			Learning” and “HUNTER: An Online Cloud Database Hybrid Tuning System for Personalized Requirements”.
-			These papers focus on the optimization of database performance through advanced techniques such as RL.<br>
-			• The productized version of these research findings is known as cdbtune. In cdbtune project phase Ⅱ, which I am
-			responsible for, I have further enhanced the system’s optimization capabilities. Specifically, I have upgraded the
-			tuning process from being based on sysbench/TPCC benchmarking to utilizing real user workload for more accurate
-			and personalized performance tuning.
+			• After officially joining Tencent, I began to be responsible for the second phase of the cdbtune project. 
+			I have further enhanced the system’s capabilities. Specifically, 
+			I have upgraded the tuning process from being based on sysbench/TPC-C benchmarking to 
+			utilizing CDB Workload Generation for more personalized performance tuning. And I have also implemented the reliable parallel tuning capability of cdbtune. 
+			For a mature commercial project like cdbtune that has already been implemented, 
+			it is not easy to refactor a stable parallel tuning system. This is also my first time practicing how to write industrial level code.
 
 			<h4 id="Workload Generation">Workload Generation</h4>
-			• Workload generation is defined as generating a representative workload from a given workload. However, current research
-			in both academia and industry primarily focuses on ensuring relative sequential consistency of transaction execution,
-			thereby overlooking conflicts between subworkloads under concurrency. <br>
-			• I have collaborated with Dr. Baoqing Cai, the first
-			author of the paper “HUNTER: An Online Cloud Database Hybrid Tuning System for Personalized Requirements” to
-			jointly develop a workload generation project. Currently, the research paper of this project is in the process of being
-			submitted. Additionally, I have taken the lead in commercializing the workload generation, and its benchmarking
-			capability has already been utilized in the cdbtune Phase 2 project. The workload replay capability can achieve over 90%
-			similarity to the original workload, and it is now widely used for internal anomaly diagnosis, performance testing and commercial proof-of-concept
-			(POC).
+			• In the first phase of the cdbtune project, the tuning process relied on traditional benchmarks such as 
+			sysbench/TPC-C. However, we discovered that the optimal knobs obtained through these benchmarks did not perform 
+			well under actual user workloads, as cdbtune overfitted to these benchmarks. To address this issue, 
+			I collaborated with Dr.Baoqing Cai to develop CDB Workload Generation, a new benchmark that reflects the 
+			complex and dynamic behavior of real-world workloads. This benchmark gener- ates data with the same distribution 
+			as the user’s data and preserves the concurrency characteristics of query loads while also retaining the fluctuation 
+			characteristics of loads over time. <br>
+			• We sample data to establish multidimensional histograms in order to obtain data distribution information. 
+			Using these histograms, we can generate benchmark data that has a distribution consistent with the original data. 
+			At the same time, we allow control over the data volume. For columns that do not appear in the query predicate, 
+			we do not establish a histogram for them. Instead, we just ensure that the generated data type and the average 
+			length are consistent with the original data. <br>
+			• We split each session in the query log, then divide these sessions into sub-sessions at certain time intervals, 
+			such as every 5 seconds. After doing this, instead of randomly sampling queries from the whole session, 
+			we can benchmark sub-session by sub-session. This approach preserves the concurrency and fluctuation 
+			characteristics of user loads. During each sub-session benchmark, we concatenate the queries into a transaction 
+			and extract template for this transaction. Within a five-second interval, we sample the transaction template based 
+			on its frequency and execute it by reintroducing the filter constant. Simultaneously, we can control the load 
+			using a rate limiter.<br>
+			• CDB Workload Generation generate anonymized queries and also anonymized data, which allowed it be a cloud service. 
+			We will continuously collect representative user workloads for our serive. Customers can choose the one that best 
+			suits their needs by considering the cloud monitoring metrics and metadata from the original workload. <br>
+			• Using CDB Workload Generation with cdbtune can recommend knobs that match the characteristics of user workloads. 
+			However, the try-and-error style of cdbtune implies that the algorithm’s convergence time is strongly correlated 
+			with the benchmark time for each round. Furthermore, in real scenarios, the workloads could dynamically change, 
+			the trained model may not efficiently transfer to new workloads. There are still many problems in the field of knobs 
+			tuning that need to be solved in the future.
+
+			<h4 id="Anomaly Detection and Root Cause Analysis System—Begining Stage">Anomaly Detection and Root Cause Analysis System—Begining Stage</h4>
+			Anomaly Detection and Root Cause Analysis System—Begining Stage Compared to the slight performance fluctuations caused by intermittent slow queries, 
+			performance anomalies usually come with a buildup of active threads, severely affecting the quality of cloud services. 
+			Our goal is to detect performance anomalies in a timely manner, or even in advance, and automatically locate the root cause. 
+			Due to the instability of OLTP task requests and the complexity of the underlying operating system and database system, 
+			cloud monitoring metrics often contain various noises. 
+			Therefore, we decided to detect anomalies by monitoring database load instead of applying temporal anomaly detection algorithms to monitoring metrics. 
+			At the same time, we use robust multiple periodicity detection algorithms to extract potential periodic load peaks , 
+			thereby reducing false positives in anomaly reporting. After detecting an anomaly, 
+			clustering and ranking will be used to locate suspicious SQL queries. 
+			At the same time, we will compare the current load with the baseline load from a week ago in real-time to identify hard-to-locate anomalous SQLs, 
+			such as new queries. The comparative method can also effectively detect performance degradation in advance. 
+			Furthermore, the wait events from the kernel will be used to analyze anomalies and generate reports.
 		
 		<h2 id="Hobby">Hobby</h2>
 			Marathon, Music, Cuisine

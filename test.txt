@@ -1,0 +1,10 @@
+curl http://10.59.160.239:9998/init_step -d 'data={
+    "inst_id" : "bd9b2728-da8e-11ed-a5bc-1c34da5309b1", 
+    "cpu" : 8,
+    "region" : "gz",
+    "time_gap" : 100,
+    "replay_time_begin": "2024-03-18 17:10:00", 
+    "replay_time_end" : "2024-03-18 17:30:00",  
+    "audit_es_host" : "9.61.93.102:10011",
+    "priority" : 100
+}'
