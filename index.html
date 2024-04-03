@@ -46,16 +46,15 @@
 	<div class="col-md-8">
 		<div class="row">
 			<div class="col-md-4" >
-				<img class="img-responsive" src="WechatIMG53.jpeg" alt="" style="width: 79%; height: auto;"><br>
+				<img class="img-responsive" src="WechatIMG53.jpeg" alt="" style="width: 60%; height: auto;"><br>
 			</div>
 
-			<div class="col-md-7" >
-				<div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yuan Jia(原嘉)</b></div><br>
-				<p><strong>Tencent</strong> - Database R&D Department - CDB/TDSQL-C</p>
-				<p>&emsp;&emsp;——AI for Database Project Team </p>
-				<p><strong>Sun Yat-sen University</strong></p>
-				<p>&emsp;&emsp;——Bachelor of Computer Science and Engineering </p>
-				<p><b>Contact: <a href="mailto:john@doe.com">woodyuan@tencent.com</a></b></p>
+			<div class="col-md-6" >
+				<div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Jia Yuan(原嘉)</b></div><br>
+				<p>PhD Student</p>
+				<p>University of Arizona</p>
+				<p>Tucson, AZ</p>
+				<p><b>Contact: <a href="mailto:john@doe.com">yuanjia339@gmail.com</a></b></p>
 			</div>
 		</div>
 	</div>
@@ -64,89 +63,25 @@
 	<!-- Biography -->
 	<div class="col-md-10" style="height: 100vh;">    
 		<h2 id="Biography">Biography</h2>
-			I graduated from Sun Yat-sen University with a bachelor’s degree in computer science.
-			I completed the majority of the courses in 2.5 years. 
-			After that, I had a brief internship experience at the Big Data and Computational Intelligence Research Institute at Sun Yat-sen University, under the guidance of Prof. Xiaojun Quan.
-			I participated in building a Web-based system, for analyzing and classifying news frames in text document. 
-			However, I found that my interests are not solely in NLP, so I decided to leave the laboratory and explore more fields. 
-			By chance, I discovered the MIT 6.824: Distributed System, which is an online open course, and I was deeply moved by its high quality. 
-			Therefore, I started searching for more excellent courses to study, including but not limited to MIT 6.830 Database System, Coursera: Machine Learning, Stanford CS224n: Natural Language Processing, and Shusen Wang: Deep Reinforcement Learning... 
-			During the learning process, I discovered an interest in the intersection of systems and machine learning. After completing my junior year, I joined Tencent and have been researching AI4DB until today. 
-			I am a part of the AI for Database project team, which belongs to the Cloud Database R&D Department. 
-			Our team is dedicated to integrating machine learning into database systems.
+			I am a 1st-year PhD student at University of Arizona, fortunately advised by <a href="https://www2.cs.arizona.edu/~caolei/">Prof. Lei Cao</a>.
+			I received my B.Eng degree in Sun Yat-sen University in 2022.
+			After that, I worked at Tencent CDB/TDSQL-C team as a software engineer for two years.
 
+	<!-- News -->
+	<h2 id="News">News</h2>
+	&#8226 2024-8, I will join University of Arizona as an PhD student.
 
-		<h2 id="Recent Research Interest">Recent Research Interest</h2>
-			<h4 id="Good data for AI">Good data for AI</h4> For most machine learning practitioners, the success of machine learning projects heavily depends on whether we can find good data for model training.
-            <h4 id="AI for good data">AI for good data</h4> Data scientists spend at least 80% of their time on data preparation. Machine learning models can help address diverse data preparation challenges.
+	<!-- Biography -->
+	<h2 id="Experience">Experience</h2>
+		<h4 id="Tencent">Tencent</h4>
+		Projects: Cardinality estimation, cdbtune - Project Phase Ⅱ, Workload Generation/Replay, Anomaly Detection and Root Cause Analysis System
 
-		<h2 id="Work/Research Experience">Research Projects</h2>
-			<h4 id="Cross-Machine Histogram">Cross-Machine Histogram</h4>
-			• Cardinality estimation is crucial for the database optimizer to generate execution plans, especially for index selection.
-			It is a fundamental yet long-standing problem in the field of query optimization that has not been fully resolved.<br>
-			• Since we are not ready for learned cardinality estimation and take into consideration of the master-salve design of instance.
-			Finally, I proposed a method of using TOP K frequencies instead of sampling to build histograms on the slave node for cardinality estimation . 
-			Test results have shown that this method achieves 40% higher accuracy in cardinality estimation compared to the original histogram approach in
-			MySQL. Statisticing the top K frequency for massive data may be very memory intensive. Based on the SpaceSaving
-			algorithm, I propose a more optimized data structure to achieve memory controllability and time complexity of O
-			(n) for efficient streaming processing of large amounts of data.
-
-
-			<h4 id="cdbtune - Project Phase 2">cdbtune - Project Phase Ⅱ</h4>
-			• After officially joining Tencent, I began to be responsible for the second phase of the cdbtune project. 
-			I have further enhanced the system’s capabilities. Specifically, 
-			I have upgraded the tuning process from being based on sysbench/TPC-C benchmarking to 
-			utilizing CDB Workload Generation for more personalized performance tuning. And I have also implemented the reliable parallel tuning capability of cdbtune. 
-			For a mature commercial project like cdbtune that has already been implemented, 
-			it is not easy to refactor a stable parallel tuning system. This is also my first time practicing how to write industrial level code.
-
-			<h4 id="Workload Generation">Workload Generation</h4>
-			• In the first phase of the cdbtune project, the tuning process relied on traditional benchmarks such as 
-			sysbench/TPC-C. However, we discovered that the optimal knobs obtained through these benchmarks did not perform 
-			well under actual user workloads, as cdbtune overfitted to these benchmarks. To address this issue, 
-			I collaborated with Dr.Baoqing Cai to develop CDB Workload Generation, a new benchmark that reflects the 
-			complex and dynamic behavior of real-world workloads. This benchmark gener- ates data with the same distribution 
-			as the user’s data and preserves the concurrency characteristics of query loads while also retaining the fluctuation 
-			characteristics of loads over time. <br>
-			• We sample data to establish multidimensional histograms in order to obtain data distribution information. 
-			Using these histograms, we can generate benchmark data that has a distribution consistent with the original data. 
-			At the same time, we allow control over the data volume. For columns that do not appear in the query predicate, 
-			we do not establish a histogram for them. Instead, we just ensure that the generated data type and the average 
-			length are consistent with the original data. <br>
-			• We split each session in the query log, then divide these sessions into sub-sessions at certain time intervals, 
-			such as every 5 seconds. After doing this, instead of randomly sampling queries from the whole session, 
-			we can benchmark sub-session by sub-session. This approach preserves the concurrency and fluctuation 
-			characteristics of user loads. During each sub-session benchmark, we concatenate the queries into a transaction 
-			and extract template for this transaction. Within a five-second interval, we sample the transaction template based 
-			on its frequency and execute it by reintroducing the filter constant. Simultaneously, we can control the load 
-			using a rate limiter.<br>
-			• CDB Workload Generation generate anonymized queries and also anonymized data, which allowed it be a cloud service. 
-			We will continuously collect representative user workloads for our serive. Customers can choose the one that best 
-			suits their needs by considering the cloud monitoring metrics and metadata from the original workload. <br>
-			• Using CDB Workload Generation with cdbtune can recommend knobs that match the characteristics of user workloads. 
-			However, the try-and-error style of cdbtune implies that the algorithm’s convergence time is strongly correlated 
-			with the benchmark time for each round. Furthermore, in real scenarios, the workloads could dynamically change, 
-			the trained model may not efficiently transfer to new workloads. There are still many problems in the field of knobs 
-			tuning that need to be solved in the future.
-
-			<h4 id="Anomaly Detection and Root Cause Analysis System—Begining Stage">Anomaly Detection and Root Cause Analysis System—Begining Stage</h4>
-			Anomaly Detection and Root Cause Analysis System—Begining Stage Compared to the slight performance fluctuations caused by intermittent slow queries, 
-			performance anomalies usually come with a buildup of active threads, severely affecting the quality of cloud services. 
-			Our goal is to detect performance anomalies in a timely manner, or even in advance, and automatically locate the root cause. 
-			Due to the instability of OLTP task requests and the complexity of the underlying operating system and database system, 
-			cloud monitoring metrics often contain various noises. 
-			Therefore, we decided to detect anomalies by monitoring database load instead of applying temporal anomaly detection algorithms to monitoring metrics. 
-			At the same time, we use robust multiple periodicity detection algorithms to extract potential periodic load peaks , 
-			thereby reducing false positives in anomaly reporting. After detecting an anomaly, 
-			clustering and ranking will be used to locate suspicious SQL queries. 
-			At the same time, we will compare the current load with the baseline load from a week ago in real-time to identify hard-to-locate anomalous SQLs, 
-			such as new queries. The comparative method can also effectively detect performance degradation in advance. 
-			Furthermore, the wait events from the kernel will be used to analyze anomalies and generate reports.
 		
-		<h2 id="Hobby">Hobby</h2>
-			Marathon, Music, Cuisine
-			<br><br><br>
-			<a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Template</a> 
+	<h2 id="Hobby">Hobby</h2>
+		Marathon, Music, Cuisine
+
+		<br><br><br>
+		<a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Template</a> 
 	</div>
 </div> 
 
